@@ -15,9 +15,9 @@ test.describe('iCasei - Automation Tests', () => {
     })
   })
 
-  // test('', async ({ page }) => {
-  //   await test.step('', async () => {
-
-  //   })
-  // })
+  test('Clicar e validar os exemplos reais', async ({ page }) => {
+    await test.step('Ver exemplos reais', async () => {
+      await paginaInicial.verExemplosReais()
+    })
+  })
 })

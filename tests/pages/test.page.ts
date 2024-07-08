@@ -18,4 +18,14 @@ export default class PaginaInicialPage {
         await expect(this.page.locator('h2[class="sc-e540dd51-1 qomPe"]').filter({ hasText: 'Quem usou, aprovou e recomenda!' })).toBeVisible()   
     }
 
+    async verExemplosReais() {
+        await this.page.locator('a[class*="home_banner_topo_link_exemplos"]').click()
+        await expect(this.page.locator('h2[class="sc-182b68e8-11 bnNQcR"]')).toBeVisible()
+        await expect(this.page.locator('section[class="sc-182b68e8-12 haYcYx"]')).toBeVisible()
+        await expect(async () => {
+        await expect(this.page.locator('span[class="sc-5188c1bd-0 iATNDF"]').filter({ hasText: 'Carregando...' })).toBeVisible()
+        }).toPass({
+            timeout: 5_000
+        });
+    }
 }
