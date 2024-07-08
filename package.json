@@ -1,0 +1,23 @@
+{
+  "name": "icaseitests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hrqlv/iCaseiTests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hrqlv/iCaseiTests/issues"
+  },
+  "homepage": "https://github.com/Hrqlv/iCaseiTests#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.10"
+  }
+}
