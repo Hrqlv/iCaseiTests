@@ -20,4 +20,16 @@ test.describe('iCasei - Automation Tests', () => {
       await paginaInicial.verExemplosReais()
     })
   })
+
+  test('Realizar validaçoes da tela de "Ver como funciona"', async () => {
+    await paginaInicial.validaçoesComoFunciona()
+  })
+
+  test('Realizar validaçoes da tela de "Ver todos os recursos"', async () => {
+   await paginaInicial.validaçoesVerTodosOsRecursos()
+  })
+
+  test('Realizar validaçoes da tela de "Ver depoimentos"', async () => {
+    await paginaInicial.validaçoesDaTelaDeDepoimentos()
+  })
 })

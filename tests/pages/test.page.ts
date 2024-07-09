@@ -28,4 +28,21 @@ export default class PaginaInicialPage {
             timeout: 5_000
         });
     }
+
+    async validaçoesComoFunciona() {
+        await this.page.locator('span[class="sc-5188c1bd-0 iATNDF"]').filter({ hasText: 'Ver como funciona' }).click()
+        await expect(this.page.locator('h1[class="sc-65ad9f9f-3 eOnwVF"]')).toBeVisible()
+        await expect(this.page.locator('h2[class="sc-65ad9f9f-15 gAMXrh"]')).toBeVisible()
+        await expect(this.page.locator('h3[class="sc-65ad9f9f-22 iyQOCu"]').nth(1)).toBeVisible()
+    }
+
+    async validaçoesVerTodosOsRecursos() {
+        await this.page.locator('span[class="sc-5188c1bd-0 iATNDF"]').filter({ hasText: 'Ver todos os recursos' }).click()
+        await expect(this.page.locator('h1[class="sc-bd724a86-3 eUjjgH"]')).toBeVisible()
+    }
+
+    async validaçoesDaTelaDeDepoimentos() {
+        await this.page.locator('span[class="sc-5188c1bd-0 iATNDF"]').filter({ hasText: 'Ver mais depoimentos' }).click()
+        await expect(this.page.locator('section[id="initial-section"]')).toBeVisible()
+    }
 }
